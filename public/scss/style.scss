@@ -1,0 +1,24 @@
+
+@import "compass/css3/transform";
+
+html, body, #map-canvas {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+#world {
+   width: 100%;
+   height: 100%;
+   @include perspective(500);
+   @include transform-style(preserve-3d);
+   @include transform-origin(50%, 50%);
+}
+
+#map-canvas {
+   width: 50%;
+   margin: 0 auto;
+   @include transform(translateZ(-91px) rotateX(45deg) !important)
+}
+
+
